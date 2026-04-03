@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Xertion Fitness</title>
+  <meta name="description" content="Take a look inside Xertion Fitness — Cabot's premier 24/7 gym. See our equipment, facility, and everything we have to offer." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-masonry {
+      columns: 3;
+      column-gap: var(--space-4);
+    }
+    .gallery-masonry-item {
+      break-inside: avoid;
+      margin-bottom: var(--space-4);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: var(--color-gray-900);
+    }
+    .gallery-masonry-item img {
+      width: 100%;
+      display: block;
+      transition: transform var(--transition-slow);
+    }
+    .gallery-masonry-item:hover img { transform: scale(1.04); }
+    .gallery-masonry-item__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+    .gallery-masonry-item:hover .gallery-masonry-item__overlay { opacity: 1; }
+    @media (max-width: 900px) { .gallery-masonry { columns: 2; } }
+    @media (max-width: 500px) { .gallery-masonry { columns: 1; } }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="announcement-bar__track">
+      <span>📸 Come See Us Today</span>
+      <span>•</span>
+      <span>🏋️ State-of-the-Art Equipment</span>
+      <span>•</span>
+      <span>🕐 24/7 Access</span>
+      <span>•</span>
+      <span>📍 2251 Bill Foster Memorial Hwy, Cabot AR</span>
+      <span>•</span>
+      <span>📸 Come See Us Today</span>
+      <span>•</span>
+      <span>🏋️ State-of-the-Art Equipment</span>
+      <span>•</span>
+      <span>🕐 24/7 Access</span>
+      <span>•</span>
+      <span>📍 2251 Bill Foster Memorial Hwy, Cabot AR</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">XERTION <span>FITNESS</span></a>
+      <nav class="header__nav">
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="memberships.html" class="nav__link">Memberships</a></li>
+          <li><a href="team.html" class="nav__link">Trainers</a></li>
+          <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+      </nav>
+      <button class="header__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="header__logo" style="margin-bottom:2rem;">XERTION <span>FITNESS</span></a>
+    <ul class="mobile-menu__links">
+      <li><a href="index.html" class="mobile-menu__link">Home</a></li>
+      <li><a href="about.html" class="mobile-menu__link">About</a></li>
+      <li><a href="memberships.html" class="mobile-menu__link">Memberships</a></li>
+      <li><a href="team.html" class="mobile-menu__link">Trainers</a></li>
+      <li><a href="gallery.html" class="mobile-menu__link">Gallery</a></li>
+      <li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+    </ul>
+    <div class="mobile-menu__cta">
+      <a href="contact.html" class="btn btn-primary btn-lg" style="width:100%">Get Started Today</a>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">The Facility</span>
+        <h1 class="page-hero__title">See the <span class="accent">Space</span></h1>
+        <p class="page-hero__subtitle">
+          Take a look at everything Xertion Fitness has to offer.
+          State-of-the-art equipment in a welcoming, serious training environment.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--lg" style="background:var(--color-black);">
+      <div class="container">
+        <div class="gallery-masonry">
+
+          <div class="gallery-masonry-item reveal">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/0f832869-dede-4123-9a07-3ad7ed1600b6/image0.jpeg" alt="Xertion Fitness gym floor" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-1">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/e9ece41c-4ed6-41a6-940b-9c802f1682a3/image1.jpeg" alt="Xertion Fitness weight area" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-2">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/1089c1a9-255d-44a3-bf01-55b504809e83/image2.jpeg" alt="Xertion Fitness equipment" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/8c1437cf-7cdc-4595-a866-6771e72862d5/image3.jpeg" alt="Xertion Fitness cardio machines" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-1">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/519839cb-d702-4381-8cdf-efb56c207773/image4.jpeg" alt="Xertion Fitness interior" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-2">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/f2ad3135-214e-4e53-9995-999ff5122c64/4482633730565226476.jpeg" alt="Xertion Fitness training area" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/71ad8cb8-5ef1-47c1-97a1-dbaf5dda6f29/3357358686956240447.jpeg" alt="Xertion Fitness facility" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-1">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/39389385-58d7-446d-9801-ff382ab6e9e0/IMG_8018.jpeg" alt="Xertion Fitness gym" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-2">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/138c9736-368e-4a29-9884-7d8becc31bb5/IMG_8009.jpeg" alt="Xertion Fitness weights" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/444fbb83-55db-4569-b952-f3a036efd6ba/IMG_7934.jpeg" alt="Xertion Fitness squat rack" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-1">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/94514c48-45e5-4a68-97e1-b198e2030cee/IMG_7933.jpeg" alt="Xertion Fitness cable machine" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal delay-2">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/7009e0ca-d178-43d7-ad27-b548e3636f9c/IMG_7932.jpeg" alt="Xertion Fitness free weights" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+          <div class="gallery-masonry-item reveal">
+            <img src="https://images.squarespace-cdn.com/content/v1/698f592af66ebf589f0fa18b/e5c2524e-ab53-4a82-8e3c-8ad109c28ecc/IMG_7928.jpeg" alt="Xertion Fitness training floor" loading="lazy" />
+            <div class="gallery-masonry-item__overlay"><span style="font-size:2rem;color:var(--color-accent);">⊕</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="announcement-bar" style="padding: var(--space-4) var(--space-4);">
+      <div class="announcement-bar__track" style="font-size:var(--text-base);">
+        <span>Come See Us Today</span><span>•</span>
+        <span>24/7 Access</span><span>•</span>
+        <span>Personal Training Available</span><span>•</span>
+        <span>On-Site Massage Therapy</span><span>•</span>
+        <span>Cabot, AR 72023</span><span>•</span>
+        <span>Come See Us Today</span><span>•</span>
+        <span>24/7 Access</span><span>•</span>
+        <span>Personal Training Available</span><span>•</span>
+        <span>On-Site Massage Therapy</span><span>•</span>
+        <span>Cabot, AR 72023</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2 class="cta-banner__title">See It In Person</h2>
+          <p class="cta-banner__text">Photos don't do it justice. Come check out the facility for yourself — we're open 24/7.</p>
+          <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+            <a href="memberships.html" class="btn btn-outline btn-lg">View Memberships</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox__close" aria-label="Close lightbox">✕</button>
+    <img class="lightbox__img" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <div class="footer__brand-logo">XERTION <span>FITNESS</span></div>
+          <p class="footer__tagline">Cabot's premier 24/7 fitness facility. Built for every level, dedicated to your transformation.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Navigate</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About & Amenities</a></li>
+            <li><a href="memberships.html" class="footer__link">Memberships</a></li>
+            <li><a href="team.html" class="footer__link">Our Trainers</a></li>
+            <li><a href="gallery.html" class="footer__link">Gallery</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="memberships.html" class="footer__link">Monthly Membership</a></li>
+            <li><a href="memberships.html" class="footer__link">12-Month Prepaid</a></li>
+            <li><a href="team.html" class="footer__link">Personal Training</a></li>
+            <li><a href="contact.html" class="footer__link">Massage Therapy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <div class="footer__contact-item">📍 <span>2251 Bill Foster Memorial Hwy,<br>Cabot, AR 72023</span></div>
+          <div class="footer__contact-item">📞 <a href="tel:5016051744">(501) 605-1744</a></div>
+          <div class="footer__contact-item">✉️ <a href="mailto:xertionfitness1@gmail.com">xertionfitness1@gmail.com</a></div>
+          <div class="footer__contact-item">🕐 <span>Open 24/7</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2025 Xertion Fitness. All rights reserved.</span>
+        <div class="footer__legal"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta-bar">
+    <div class="mobile-cta-bar__inner">
+      <a href="tel:5016051744" class="btn btn-outline btn-sm">📞 Call Us</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    // Wire up masonry items to lightbox
+    document.querySelectorAll('.gallery-masonry-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const lightbox = document.querySelector('.lightbox');
+        const lbImg = lightbox?.querySelector('.lightbox__img');
+        if (lbImg && img) {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
