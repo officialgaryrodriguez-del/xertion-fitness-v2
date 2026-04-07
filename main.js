@@ -153,10 +153,18 @@
     btn.disabled = true;
     btn.textContent = 'Sending...';
 
-    setTimeout(() => {
-      contactForm.style.display = 'none';
-      if (formSuccess) formSuccess.style.display = 'block';
-    }, 1000);
+    const data = new FormData(contactForm);
+
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+      .then(() => {
+        contactForm.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        alert('Something went wrong. Please try again or email us directly at xertionfitness1@gmail.com');
+      });
   });
 
   /* ─── Training Application Form ──────────────────────────── */

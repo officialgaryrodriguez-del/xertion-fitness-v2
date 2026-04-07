@@ -162,7 +162,9 @@
                 Fill out the form and we'll get back to you as soon as possible.
               </p>
 
-              <form id="contact-form" novalidate>
+              <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 <div class="form-row">
                   <div class="form-group">
                     <label class="form-label" for="name">Full Name *</label>
