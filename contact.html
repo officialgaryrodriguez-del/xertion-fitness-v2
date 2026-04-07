@@ -292,5 +292,18 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get('subject');
+    const trainer = params.get('trainer');
+    if (subject) {
+      const select = document.getElementById('subject');
+      if (select) select.value = subject;
+    }
+    if (trainer) {
+      const msg = document.getElementById('message');
+      if (msg) msg.value = "I'm interested in personal training with " + trainer + ". ";
+    }
+  </script>
 </body>
 </html>
