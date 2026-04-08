@@ -252,19 +252,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .announcement-bar__track {
   display: flex;
   width: max-content;
-  gap: var(--space-16);
   animation: marquee 30s linear infinite;
   white-space: nowrap;
+}
+
+.announcement-bar__track span {
+  flex-shrink: 0;
+  margin-right: var(--space-16);
 }
 
 @media (max-width: 768px) {
   .announcement-bar__track {
     animation-duration: 18s;
-    gap: var(--space-8);
+  }
+  .announcement-bar__track span {
+    margin-right: var(--space-8);
   }
 }
-
-.announcement-bar__track span { flex-shrink: 0; }
 
 @keyframes marquee {
   from { transform: translateX(0); }
