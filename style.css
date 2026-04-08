@@ -256,6 +256,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+  .announcement-bar__track {
+    animation-duration: 20s;
+  }
+}
+
 .announcement-bar__track span { flex-shrink: 0; }
 
 @keyframes marquee {
