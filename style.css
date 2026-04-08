@@ -258,7 +258,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (max-width: 768px) {
   .announcement-bar__track {
-    animation-duration: 10s;
+    animation-duration: 6s;
   }
 }
 
