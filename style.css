@@ -251,6 +251,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .announcement-bar__track {
   display: flex;
+  width: max-content;
   gap: var(--space-16);
   animation: marquee 30s linear infinite;
   white-space: nowrap;
@@ -259,7 +260,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 768px) {
   .announcement-bar__track {
     animation-duration: 18s;
-    gap: var(--space-6);
+    gap: var(--space-8);
   }
 }
 
