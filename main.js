@@ -5,6 +5,17 @@
 (function () {
   'use strict';
 
+  /* ─── Announcement Bar Seamless Loop ────────────────────── */
+  const track = document.querySelector('.announcement-bar__track');
+  if (track) {
+    const setMarqueeOffset = () => {
+      const half = track.scrollWidth / 2;
+      track.style.setProperty('--marquee-offset', `-${half}px`);
+    };
+    setMarqueeOffset();
+    window.addEventListener('resize', setMarqueeOffset, { passive: true });
+  }
+
   /* ─── Sticky Header ──────────────────────────────────────── */
   const header = document.querySelector('.header');
   if (header) {
